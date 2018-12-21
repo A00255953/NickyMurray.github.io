@@ -1,7 +1,7 @@
 # Site settings
 title: "Nicholas Murray"
 email:
-description: > Software Development Portfolio
+description: > "Software Development Portfolio"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 

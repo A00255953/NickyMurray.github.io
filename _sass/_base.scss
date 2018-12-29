@@ -70,12 +70,12 @@ aside {
 // Navigation
 
 .navbar-default {
-    background-color: white;
-    border-color: rgba($theme-dark, .5);
+    background-color: $theme-dark;
+    border-color: rgba(white, .3);
     @include sans-serif-font;
     @include transition-all;
     .navbar-header .navbar-brand {
-        color: $theme-primary;
+        color: rgba(white, .7);
         @include sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
@@ -91,9 +91,11 @@ aside {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
-                color: $theme-dark;
+                color: rgba(white, .7);
+                background-color: transparent;
                 &:hover {
-                    color: $theme-primary;
+                    color: rgba(white, .7);
+                    background-color: lighten($theme-dark, 30%);
                 }
             }
             &.active {
@@ -150,35 +152,58 @@ aside {
 // Homepage Header
 
 header {
-    position: relative;
+    //position: relative;
     width: 100%;
-    min-height: auto;
+    height: 400px;
+    padding-top: 100px;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: linear-gradient(rgba(8, 8, 8, 0.2), rgba(8,8,8,0.8)), url('../img/header.jpg');
     text-align: center;
     color: white;
     .header-content {
         position: relative;
-        text-align: center;
-        padding: 100px 15px 100px;
-        width: 100%;
+        text-align: left;
+        //padding: 50px 15px 50px;
+        //width: 100%;
         .header-content-inner {
             h1 {
                 font-weight: 700;
                 text-transform: uppercase;
                 margin-top: 0;
                 margin-bottom: 0;
+                color: rgb(18, 127, 255);
             }
             hr {
-                margin: 30px auto;
+                text-align: center;
             }
             p {
                 font-weight: 300;
-                color: rgba(white, .7);
+                color: rgb(255, 255, 255);
                 font-size: 16px;
-                margin-bottom: 50px;
+                //margin-bottom: 50px;
             }
+        }
+        .header-content-small{
+          text-align: left;
+          padding-left: 30px;
+          h1 {
+              font-weight: 700;
+              text-transform: uppercase;
+              margin-left: 30;
+              color: rgb(18, 127, 255);
+          }
+          hr {
+              text-align: center;
+          }
+          p {
+              font-weight: 300;
+              color: rgb(255, 255, 255);
+              font-size: 16px;
+              //margin-bottom: 50px;
+              margin-left: 30;
+              margin-top: 50;
+          }
         }
     }
     @media (min-width: 768px) {
@@ -192,13 +217,13 @@ header {
             padding: 0 50px;
             .header-content-inner {
                 max-width: 1000px;
-                margin-left: auto;
-                margin-right: auto;
+              //  margin-left: auto;
+                //margin-right: auto;
                 p {
                     font-size: 18px;
                     max-width: 80%;
-                    margin-left: auto;
-                    margin-right: auto;
+                    //margin-left: auto;
+                    //margin-right: auto;
                 }
             }
         }
@@ -348,4 +373,3 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
-

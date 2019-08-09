@@ -29,12 +29,15 @@
   <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
   <!-- Header -->
-  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo"><b>Nicholas Murray</b></h1>
-    <p>Software Design Student</p>
-    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download"></i> Download Resume
-    </button>
+  <header class="w3-container w3-center" style="padding:16px" id="home">
+    <div class="w3-container w3-cell">
+      <h1 class="w3-jumbo w3-text-white"><b>Nicholas Murray</b></h1>
+      <hr class="" width="33%" style="margin-left: 33%">
+      <p class="w3-text-white">Software Design Student</p>
+    </div>
+    <div class="w3-container w3-cell">
+      <img src="img/profile.jpg" class="w3-grayscale-max w3-circle w3-center w3-image" width="250px" height="250px" />
+    </div>
   </header>
 
   
@@ -42,7 +45,7 @@
   <div class="w3-content w3-justify w3-padding-32" id="about">
     <h2>About</h2>
     <hr>
-    <p class="card" style="padding: 20px">I am a mature Software Design student in Athlone Institute of Technology. Before deciding to get back into education to fulfill my lifegoal of becoming a software developer, I was in the British Army for 4 years in which I was trained as a Tank Driver and as part of that I undertook an apprenticeship in vehicle maintenance (aka a Mechanic). In my spare time I am either out exploring Ireland with my wife and daughter or in the gym. I also spend way too much time making apps and games for me and my family.
+    <p class="card" style="padding: 20px">I am a mature student studying Software Design in Athlone Institute of Technology. Before deciding to get back into education to fulfill my lifegoal of becoming a software developer, I was in the British Army for 4 years in which I was trained as a Tank Driver and as part of that I undertook an apprenticeship in vehicle maintenance (aka a Mechanic). In my spare time I am either out exploring Ireland with my wife and daughter or in the gym. I also spend way too much time making apps and games for me and my family.
     </p>   
   <!-- End About Section -->
   </div>
@@ -51,13 +54,37 @@
   <div class="w3-padding-32 w3-content" id="portfolio">
     <h2>My Portfolio</h2>
     <hr>
-    <div class="w3-cell-row card w3-animate-left">
-      <div class="w3-container w3-cell picture"><img src="img/PortalKnightShot.PNG" style="height:250px"/></div>
-      <div class="w3-container w3-cell" style="padding: 10px;">
+    <div class="card w3-animate-left">
+      <!--Large Screens-->
+      <div class="w3-container w3-cell w3-mobile picture"><img src="img/PortalKnightShot.PNG" style="height:300px"/></div>
+      <div class="w3-container w3-cell w3-mobile showFullscreen">
         <h1>Portal Knight</h1>
-        <p>This was my entry to Games Fleadh 2019, it won me the award for Best Original Innovation. I created Portal Knight using Unity and free sprites and sounds that I found on various websites. Check it out on GitHub <a href="https://github.com/NickyMurray/PortalKnight">here</a>.</p>
+        <p>This was my entry to Games Fleadh 2019, it won me the award for Best Original Innovation. I created Portal Knight using Unity and free sprites and sounds that I found on various websites. Check it out on GitHub <a class="link" href="https://github.com/NickyMurray/PortalKnight">here</a>.</p>
+      </div>
+      <!--End Large Screens-->
+      <!--Small/Medium Screens-->
+      <div class="w3-container pictureSmall"><img src="img/PortalKnightShot.PNG" style="height:300px; width:100%;"/></div>
+      <div class="w3-container hideFullscreen">
+        <h1>Portal Knight</h1>
+        <p>This was my entry to Games Fleadh 2019, it won me the award for Best Original Innovation. I created Portal Knight using Unity and free sprites and sounds that I found on various websites. Check it out on GitHub <a class="link" href="https://github.com/NickyMurray/PortalKnight">here</a>.</p>
       </div>
     </div>
+
+    <div class="card w3-animate-left" style="margin-top: 30px">
+        <!--Large Screens-->
+        <div class="w3-container w3-cell w3-mobile picture"><img src="img/BudgApp.jpg" style="height:300px"/></div>
+        <div class="w3-container w3-cell w3-mobile showFullscreen">
+          <h1>BudgApp</h1>
+          <p>I created BudgApp for my wife to make doing the monthly quicker and much more painless. The origianl version was made using Unity because I knew how to use Unity well and decided I could throw a simple non-game related app together pretty quick. A couple months later I realised it was a terrible idea to use Unity between the non native UI components and the splash screen, so I decided to learn teach myself how to use Xamarin and its Mark-up language XAML. Check it out on GitHub <a class="link" href="https://github.com/NickyMurray/BudgApp">here</a>.</p>
+        </div>
+        <!--End Large Screens-->
+        <!--Small/Medium Screens-->
+        <div class="w3-container pictureSmall" style="position: center"><img src="img/BudgApp.jpg" style="height:300px; width: 50%"/></div>
+        <div class="w3-container hideFullscreen">
+          <h1>BudgApp</h1>
+          <p>I created BudgApp for my wife to make doing the monthly quicker and much more painless. The origianl version was made using Unity because I knew how to use Unity well and decided I could throw a simple non-game related app together pretty quick. A couple months later I realised it was a terrible idea to use Unity between the non native UI components and the splash screen, so I decided to learn teach myself how to use Xamarin and its Mark-up language XAML. Check it out on GitHub <a class="link" href="https://github.com/NickyMurray/BudgApp">here</a>.</p>
+        </div>
+      </div>
   </div>
   <!-- End Portfolio Section -->
 
@@ -68,32 +95,16 @@
     <hr>
 
     <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Westmeath, Ireland</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: nicholas.murray@live.com</p>
+      <p class="white"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Westmeath, Ireland</p>
     </div>
   
    
-    <p>Lets get in touch. Send me a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
+    <p class="white">Lets get in touch. Send me an email or message on LinkedIn</p>
+    <p class="white"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: nicholas.murray@live.com</p>
+    <a class="w3-padding" href="https://www.linkedin.com/in/nicholas-murray-a06718174/"><i class="fa fa-linkedin white" style="font-size:60px"></i></a>
+    <a class="w3-padding" href="https://github.com/NickyMurray"><i class="fa fa-github white" style="font-size:60px"></i></a>
   <!-- End Contact Section -->
   </div>  
-  
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-    <i class="fa fa-github w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <!-- End footer -->
-  </footer>
   
 <!-- END PAGE CONTENT -->
 </div>

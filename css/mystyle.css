@@ -1,20 +1,23 @@
 
 body, h1,h2,h3,h4,h5,h6 
 {
-    font-family: "Montserrat", sans-serif
+    font-family: "Montserrat", sans-serif;
 }
 
-hr
+h2
 {
-    
+    color: white;
 }
-
 p
 {
     font-size: 17.5px;
 }
 
-a
+.white
+{
+    color: white;
+}
+.link
 {
     color : rgb(255, 251, 0);           
 }
@@ -25,22 +28,35 @@ a
 
 body
 {
-    background-image:  linear-gradient(to right,rgba(180, 180, 180, 0) 10%, rgba(255, 255, 255, 1) 90%)
+    background-image:  linear-gradient(to right,rgba(82, 82, 82, 0) 10%, rgb(82, 82, 82) 90%)
 }
+
 html
 {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url('../img/Backgrounds/0.JPG');
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
+
 }
 
 .card
 {
-    background-color: rgba(71, 71, 71, 0.466);
+    background-color: rgba(255, 255, 255, 0.918);
     box-shadow: 2.5px 2.5px rgba(0, 0, 0, 0.726);
 
+}
+
+.showFullscreen
+{
+    padding: 10px;
+}
+
+.hideFullscreen
+{
+    padding: 10px;
+    display: none;
 }
 
 .picture
@@ -51,14 +67,31 @@ html
 
 .picture::after
 {
-    display: block;
   position: relative;
-  background-image: linear-gradient(to right,  rgba(71, 71, 71, 0) 0,  rgb(71, 71, 71) 100%);
-  margin-top: -250px;
-  height:250px;
+  background-image: linear-gradient(to right,  rgba(255, 255, 255, 0) 0,  rgba(255, 255, 255, 0.705) 100%);
+  margin-top: -300px;
+  height:300px;
   width: 100%;
 }
 
+.pictureSmall
+{
+    padding: 0px;
+    display: none;
+}
 
+@media screen and (max-width: 1800px)
+{
+
+    .hideFullscreen, .pictureSmall
+    {
+        display: block;
+    }
+
+    .showFullscreen, .picture
+    {
+        display: none;
+    }
+}
 
 

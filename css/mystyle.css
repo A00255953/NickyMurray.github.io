@@ -41,6 +41,14 @@ html
 
 }
 
+.WebGL
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/Backgrounds/6.JPG');
+    background-size: cover;
+    background-size: -100%;
+}
 .card
 {
     background-color: rgba(255, 255, 255, 0.918);

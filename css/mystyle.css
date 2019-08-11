@@ -103,6 +103,7 @@ html
     html
     {
         background-image: url('../img/Backgrounds/1.JPG');
+        background-size: fill;
     }
 }
 
